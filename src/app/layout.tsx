@@ -5,7 +5,7 @@ import { ReactNode } from 'react'
 import { ThemeProvider } from '../providers/theme-provider'
 import { cn } from '../utils/tw-merge'
 
-import '@/src/styles/globals.css'
+import '../styles/globals.css'
 
 export const metadata: Metadata = {
 	title: 'NestJS Yookassa by TeaCoder',

@@ -28,7 +28,7 @@ export const nav = {
 			url: '/',
 			items: [
 				{
-					title: 'Введение',
+					title: 'Регистрация',
 					url: '/docs/getting-started/introduction'
 				},
 				{
