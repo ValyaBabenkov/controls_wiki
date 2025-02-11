@@ -1,5 +1,4 @@
 'use client'
-
 import { ChevronRight } from 'lucide-react'
 import type { ComponentProps } from 'react'
 
@@ -24,6 +23,20 @@ import {
 export const nav = {
 	navMain: [
 		{
+			title: 'О проекте',
+			url: '/docs/sponsort/create',
+			items: [
+				{
+					title: 'Описание',
+					url: '/docs/refunds/create'
+				},
+				{
+					title: 'Контакты',
+					url: '/docs/contacts/contacts'
+				},
+			]
+		},
+		{
 			title: 'Начало работы',
 			url: '/',
 			items: [
@@ -38,47 +51,60 @@ export const nav = {
 			]
 		},
 		{
-			title: 'Платежи',
-			url: '/docs/payments/create',
+			title: 'Программа',
+			url: '/docs/program',
 			items: [
 				{
-					title: 'Создание платежа',
-					url: '/docs/payments/create'
-				},
-				{
-					title: 'Подтверждение платежа',
-					url: '/docs/payments/confirm'
-				},
-				{
-					title: 'Отмена платежа',
-					url: '/docs/payments/cancel'
-				},
-				{
-					title: 'Список платежей',
-					url: '/docs/payments/list'
-				},
-				{
-					title: 'Информация о платеже',
-					url: '/docs/payments/info'
+					title: 'Управление программами',
+					url: '/docs/program/program'
 				}
 			]
 		},
 		{
-			title: 'Возвраты',
-			url: '/docs/refunds/create',
+			title: 'Проект',
+			url: '/docs/project/project',
 			items: [
 				{
-					title: 'Создание возврата',
-					url: '/docs/refunds/create'
+					title: 'Управление проектом',
+					url: '/docs/project/project'
 				},
 				{
-					title: 'Список возвратов',
-					url: '/docs/refunds/list'
+					title: 'Команда',
+					url: '/docs/project/team'
 				},
 				{
-					title: 'Информация о возврате',
-					url: '/docs/refunds/info'
+					title: 'Справочник помещений',
+					url: '/docs/project/floors'
+				},
+				{
+					title: 'Шаблон чек-листов',
+					url: '/docs/project/checklists'
 				}
+			]
+		},
+		{
+			title: 'Осмотры',
+			url: '/docs/round/checklist',
+			items: [
+				{
+					title: 'Чек-лист',
+					url: '/docs/round/checklist'
+				},
+				{
+					title: 'Помещениям',
+					url: '/docs/round/floor'
+				},
+			]
+		},
+		{
+			title: 'FAQ',
+			url: '/docs/faq/faq',
+			items: [
+				{
+					title: 'Вопросы',
+					url: '/docs/faq/faq'
+				}
+
 			]
 		}
 	]
