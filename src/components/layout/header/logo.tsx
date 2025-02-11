@@ -7,7 +7,7 @@ export function Logo() {
 				href='/'
 				className='flex items-center gap-x-3 text-xl font-bold'
 			>
-				NestJS Yookassa
+				ControlsApp
 			</Link>
 		</div>
 	)

@@ -12,15 +12,15 @@ export function MainNav() {
 			<Logo />
 			<nav className='flex items-center gap-4 text-sm xl:gap-6'>
 				<ModeSwitcher />
-				<Link
-					href='https://github.com/teacoder-team/nestjs-yookassa'
-					target='_blank'
-				>
-					<Button className='text-white'>
-						<FaGithub className='mr-2 size-4' />
-						Github
-					</Button>
-				</Link>
+				{/*<Link*/}
+				{/*	href='https://github.com/teacoder-team/nestjs-yookassa'*/}
+				{/*	target='_blank'*/}
+				{/*>*/}
+				{/*	<Button className='text-white'>*/}
+				{/*		<FaGithub className='mr-2 size-4' />*/}
+				{/*		Github*/}
+				{/*	</Button>*/}
+				{/*</Link>*/}
 			</nav>
 		</div>
 	)

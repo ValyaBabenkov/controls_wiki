@@ -29,11 +29,11 @@ export const nav = {
 			items: [
 				{
 					title: 'Регистрация',
-					url: '/docs/getting-started/introduction'
+					url: '/docs/register/register'
 				},
 				{
-					title: 'Инструкция по установке',
-					url: '/docs/getting-started/installation'
+					title: 'Восстановление пароля',
+					url: '/docs/register/reset'
 				}
 			]
 		},
