@@ -155,3 +155,7 @@
 	background-color: rgba(0, 255, 255, 0.2);
 	border-radius: 4px;
 }
+
+.link {
+	@apply text-link;
+}

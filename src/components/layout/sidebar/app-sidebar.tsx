@@ -1,4 +1,5 @@
 'use client'
+
 import { ChevronRight } from 'lucide-react'
 import type { ComponentProps } from 'react'
 
@@ -12,112 +13,20 @@ import {
 	SidebarMenuButton,
 	SidebarMenuItem,
 	SidebarRail
-} from '../../ui/common/sidebar'
+} from '../../ui/sidebar'
 
 import {
 	Collapsible,
 	CollapsibleContent,
 	CollapsibleTrigger
 } from './collapsible'
-
-export const nav = {
-	navMain: [
-		{
-			title: 'О проекте',
-			url: '/',
-			items: [
-				{
-			 		title: 'О приложении',
-			 		url: '/'
-				},
-				{
-					title: 'Контакты',
-					url: '/docs/contacts/contacts'
-				}
-			]
-			// items: [
-			// 	{
-			// 		title: 'Описание',
-			// 		url: '/docs/refunds/create'
-			// 	},
-			// 	{
-			// 		title: 'Спонсорство',
-			// 		url: '/docs/sponsorship/sponsorship'
-			// 	},
-			// 	{
-			// 		title: 'Контакты',
-			// 		url: '/docs/contacts/contacts'
-			// 	},
-			// ]
-		},
-		{
-			title: 'Начало работы',
-			url: '/docs/register/register',
-			items: [
-				{
-					title: 'Регистрация',
-					url: '/docs/register/register'
-				},
-				{
-					title: 'Восстановление пароля',
-					url: '/docs/register/reset'
-				}
-			]
-		},
-		{
-			title: 'Программа',
-			url: '/docs/program',
-			items: [
-				{
-					title: 'Управление программами',
-					url: '/docs/program/program'
-				}
-			]
-		},
-		{
-			title: 'Проект',
-			url: '/docs/project/project',
-			items: [
-				{
-					title: 'Управление проектом',
-					url: '/docs/project/project'
-				},
-				{
-					title: 'Команда',
-					url: '/docs/project/teams'
-				},
-				{
-					title: 'Справочник помещений',
-					url: '/docs/project/floors'
-				},
-				{
-					title: 'Шаблон чек-листов',
-					url: '/docs/project/checklists'
-				}
-			]
-		},
-		{
-			title: 'Осмотры',
-			url: '/docs/round/checklists',
-			items: [
-				{
-					title: 'Чек-лист',
-					url: '/docs/round/checklists'
-				},
-				{
-					title: 'Помещениям',
-					url: '/docs/round/floors'
-				},
-			]
-		}
-	]
-}
+import { docsConfig } from '@/src/config/docs.config'
 
 export function AppSidebar({ ...props }: ComponentProps<typeof Sidebar>) {
 	return (
 		<Sidebar {...props}>
 			<SidebarContent className='gap-0'>
-				{nav.navMain.map(item => {
+				{docsConfig.sidebarNav.map(item => {
 					return (
 						<Collapsible
 							key={item.title}
@@ -138,7 +47,7 @@ export function AppSidebar({ ...props }: ComponentProps<typeof Sidebar>) {
 								<CollapsibleContent>
 									<SidebarGroupContent>
 										<SidebarMenu>
-											{item.items.map(item => (
+											{item.items?.map(item => (
 												<SidebarMenuItem
 													className='ml-4'
 													key={item.title}
