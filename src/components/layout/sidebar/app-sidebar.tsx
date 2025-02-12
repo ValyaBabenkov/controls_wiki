@@ -24,21 +24,35 @@ export const nav = {
 	navMain: [
 		{
 			title: 'О проекте',
-			url: '/docs/sponsort/create',
+			url: '/',
 			items: [
 				{
-					title: 'Описание',
-					url: '/docs/refunds/create'
+			 		title: 'О приложении',
+			 		url: '/'
 				},
 				{
 					title: 'Контакты',
 					url: '/docs/contacts/contacts'
-				},
+				}
 			]
+			// items: [
+			// 	{
+			// 		title: 'Описание',
+			// 		url: '/docs/refunds/create'
+			// 	},
+			// 	{
+			// 		title: 'Спонсорство',
+			// 		url: '/docs/sponsorship/sponsorship'
+			// 	},
+			// 	{
+			// 		title: 'Контакты',
+			// 		url: '/docs/contacts/contacts'
+			// 	},
+			// ]
 		},
 		{
 			title: 'Начало работы',
-			url: '/',
+			url: '/docs/register/register',
 			items: [
 				{
 					title: 'Регистрация',
@@ -84,27 +98,16 @@ export const nav = {
 		},
 		{
 			title: 'Осмотры',
-			url: '/docs/round/checklist',
+			url: '/docs/round/checklists',
 			items: [
 				{
 					title: 'Чек-лист',
-					url: '/docs/round/checklist'
+					url: '/docs/round/checklists'
 				},
 				{
 					title: 'Помещениям',
-					url: '/docs/round/floor'
+					url: '/docs/round/floors'
 				},
-			]
-		},
-		{
-			title: 'FAQ',
-			url: '/docs/faq/faq',
-			items: [
-				{
-					title: 'Вопросы',
-					url: '/docs/faq/faq'
-				}
-
 			]
 		}
 	]
