@@ -37,7 +37,7 @@ export function MainNav() {
 							>
 								Функции
 							</Link>
-							<Link
+							{/* <Link
 								href='#'
 								onClick={e => {
 									e.preventDefault()
@@ -53,7 +53,7 @@ export function MainNav() {
 								className='text-sm text-muted-foreground hover:text-foreground'
 							>
 								Поддержать проект
-							</Link>
+							</Link> */}
 
 							<Link
 								href='/docs/getting-started/register'
