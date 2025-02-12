@@ -70,7 +70,7 @@ export const nav = {
 				},
 				{
 					title: 'Команда',
-					url: '/docs/project/team'
+					url: '/docs/project/teams'
 				},
 				{
 					title: 'Справочник помещений',
