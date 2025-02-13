@@ -29,12 +29,12 @@ const features = [
 
 export function Features() {
 	return (
-		<section id='features' className='container max-w-screen-2xl py-10 md:pb-32'>
-			<div className='mx-auto max-w-[58rem] text-center'>
+		<section id='features' className='container max-w-screen-2xl py-14 md:pb-32'>
+			<div className='mx-auto max-w-[58rem] text-center pt-10'>
 				<h2 className='text-3xl font-bold leading-[1.1] sm:text-3xl md:text-5xl'>
 					Функции
 				</h2>
-				<p className='mt-4 text-muted-foreground sm:text-lg'>
+				<p className='m-4 text-muted-foreground sm:text-lg'>
 					Функционал, который доступен уже сейчас
 				</p>
 			</div>
