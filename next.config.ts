@@ -10,6 +10,9 @@ const nextConfig: NextConfig = {
 	skipTrailingSlashRedirect: true,
 	experimental: {
 		optimizePackageImports: ['tailwindcss']
+	},
+	env: {
+		API_URL: process.env['API_URL']
 	}
 }
 

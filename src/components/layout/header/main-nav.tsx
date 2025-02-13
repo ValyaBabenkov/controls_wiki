@@ -1,27 +1,74 @@
+'use client'
+
 import Link from 'next/link'
-import { FaGithub } from 'react-icons/fa'
+import { usePathname } from 'next/navigation'
 
-import { Button } from '../../ui/common/button'
-import { ModeSwitcher } from '../../ui/elements/mode-switcher'
+import { ModeSwitcher } from '../../shared/mode-switcher'
 
+import { CommandMenu } from './command-menu'
 import { Logo } from './logo'
 
 export function MainNav() {
+	const pathname = usePathname()
+
+	const isDocsPage = pathname.includes('/docs')
+
 	return (
 		<div className='hidden h-16 w-full items-center justify-between md:flex'>
-			<Logo />
-			<nav className='flex items-center gap-4 text-sm xl:gap-6'>
+			<div className='flex items-center'>
+				<Logo />
+				{!isDocsPage && (
+					<div className='ml-10 hidden md:block'>
+						<div className='flex items-center space-x-8'>
+							<Link
+								href='#'
+								onClick={e => {
+									e.preventDefault()
+									setTimeout(() => {
+										document
+											.getElementById('features')
+											?.scrollIntoView({
+												behavior: 'smooth',
+												block: 'start'
+											})
+									}, 100)
+								}}
+								className='text-sm text-muted-foreground hover:text-foreground'
+							>
+								Функции
+							</Link>
+							{/*<Link*/}
+							{/*	href='#'*/}
+							{/*	onClick={e => {*/}
+							{/*		e.preventDefault()*/}
+							{/*		setTimeout(() => {*/}
+							{/*			document*/}
+							{/*				.getElementById('support')*/}
+							{/*				?.scrollIntoView({*/}
+							{/*					behavior: 'smooth',*/}
+							{/*					block: 'start'*/}
+							{/*				})*/}
+							{/*		}, 100)*/}
+							{/*	}}*/}
+							{/*	className='text-sm text-muted-foreground hover:text-foreground'*/}
+							{/*>*/}
+							{/*	Поддержать проект*/}
+							{/*</Link>*/}
+
+							<Link
+								href='/docs/getting-started/register'
+								className='text-sm text-muted-foreground hover:text-foreground'
+							>
+								Документация
+							</Link>
+						</div>
+					</div>
+				)}
+			</div>
+			<div className='flex items-center gap-4 text-sm xl:gap-6'>
+				<CommandMenu />
 				<ModeSwitcher />
-				{/*<Link*/}
-				{/*	href='https://github.com/teacoder-team/nestjs-yookassa'*/}
-				{/*	target='_blank'*/}
-				{/*>*/}
-				{/*	<Button className='text-white'>*/}
-				{/*		<FaGithub className='mr-2 size-4' />*/}
-				{/*		Github*/}
-				{/*	</Button>*/}
-				{/*</Link>*/}
-			</nav>
+			</div>
 		</div>
 	)
 }
