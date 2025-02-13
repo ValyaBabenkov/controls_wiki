@@ -29,7 +29,7 @@ const features = [
 
 export function Features() {
 	return (
-		<section id='features' className='container space-y-16 py-10 md:pb-32'>
+		<section id='features' className='container max-w-screen-2xl py-10 md:pb-32'>
 			<div className='mx-auto max-w-[58rem] text-center'>
 				<h2 className='text-3xl font-bold leading-[1.1] sm:text-3xl md:text-5xl'>
 					Функции

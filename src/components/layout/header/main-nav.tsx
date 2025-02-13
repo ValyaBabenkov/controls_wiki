@@ -37,23 +37,23 @@ export function MainNav() {
 							>
 								Функции
 							</Link>
-							{/* <Link
-								href='#'
-								onClick={e => {
-									e.preventDefault()
-									setTimeout(() => {
-										document
-											.getElementById('support')
-											?.scrollIntoView({
-												behavior: 'smooth',
-												block: 'start'
-											})
-									}, 100)
-								}}
-								className='text-sm text-muted-foreground hover:text-foreground'
-							>
-								Поддержать проект
-							</Link> */}
+							{/*<Link*/}
+							{/*	href='#'*/}
+							{/*	onClick={e => {*/}
+							{/*		e.preventDefault()*/}
+							{/*		setTimeout(() => {*/}
+							{/*			document*/}
+							{/*				.getElementById('support')*/}
+							{/*				?.scrollIntoView({*/}
+							{/*					behavior: 'smooth',*/}
+							{/*					block: 'start'*/}
+							{/*				})*/}
+							{/*		}, 100)*/}
+							{/*	}}*/}
+							{/*	className='text-sm text-muted-foreground hover:text-foreground'*/}
+							{/*>*/}
+							{/*	Поддержать проект*/}
+							{/*</Link>*/}
 
 							<Link
 								href='/docs/getting-started/register'
@@ -68,15 +68,6 @@ export function MainNav() {
 			<div className='flex items-center gap-4 text-sm xl:gap-6'>
 				<CommandMenu />
 				<ModeSwitcher />
-				{/*<Link*/}
-				{/*	href='https://github.com/teacoder-team/nestjs-yookassa'*/}
-				{/*	target='_blank'*/}
-				{/*>*/}
-				{/*	<Button className='text-white'>*/}
-				{/*		<FaGithub className='mr-2 size-4' />*/}
-				{/*		Github*/}
-				{/*	</Button>*/}
-				{/*</Link>*/}
 			</div>
 		</div>
 	)
